@@ -34,6 +34,8 @@ class Computer:
         self.price = price
     
     # What methods will you need?
+    # Let the computer only have its own attributes, and let the resaleshop deal with the updated price/os or other attributes related to the computer, so no more
+    # methods might be needed here.
 
 '''
 # Set up different computers
