@@ -20,6 +20,11 @@ class ResaleShop:
         self.itemID += 1 # increment itemID
         self.inventory.insert(self.itemID, computer)
         return self.itemID
+    '''
+    # Buy a computer use append method, might need to change all IDs into computer.description
+    def buy(self, computer: object):
+        self.inventory.append(computer)
+    '''
     
     # Update the price of a computer
     def update_price(self, item_id: int, new_price: int):
@@ -35,6 +40,15 @@ class ResaleShop:
             print("Item", item_id, "sold!")
         else: 
             print("Item", item_id, "not found. Please select another item to sell.")
+    '''
+    # Sell a computer using remove method
+    def sell(self, computer: object):
+        if computer in self.inventory:
+            self.inventory.remove(computer)
+            print("Item", computer.description, "sold!")
+        else:
+            print("Item", computer.description, "not found. Please select another item to sell.")
+    '''
     
     # Print the inventory of the resaleshop
     def print_inventory(self):
@@ -117,6 +131,11 @@ def main():
     # Now, let's sell it!
     print("Selling Item ID:", computer_id)
     resaleshop.sell(computer_id)
+    '''
+    # Sell it with the remove method
+    print("Selling Item", computer1.description)
+    resaleshop.sell(computer1)
+    '''
     
     # Make sure it worked by checking inventory
     print("Checking inventory...")
