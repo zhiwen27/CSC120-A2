@@ -13,9 +13,9 @@ class ResaleShop:
     # itemID: int = 0
     
     # Set up the constructer
-    def __init__(self, itemID):
+    def __init__(self):
         self.inventory = []
-        self.itemID = itemID
+        self.itemID = 0
 
     # Buy a computer
     def buy(self, computer: object):
@@ -86,7 +86,7 @@ def main():
     # A sample to test the above methods.
 
     # Define a new resaleshop
-    resaleshop = ResaleShop(itemID = 0)
+    resaleshop = ResaleShop()
     
     # Print a little banner
     print("-" * 21)
