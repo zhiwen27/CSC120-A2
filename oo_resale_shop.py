@@ -11,8 +11,8 @@ class ResaleShop:
     itemID: int = 0
     
     # Set up the constructer
-    def __init__(self, inventory, itemID):
-        self.inventory = inventory
+    def __init__(self, itemID):
+        self.inventory = []
         self.itemID = itemID
 
     # Buy a computer
@@ -57,7 +57,7 @@ class ResaleShop:
             # For each item
             for item in self.inventory:
                 # Print its details
-                print(f'Item ID: {self.itemID} : {item}')
+                print(f'Item ID: {self.itemID} : {item.description}')
         else:
             print("No inventory to display.")
     
@@ -84,7 +84,7 @@ def main():
     # A sample to test the above methods.
 
     # Define a new resaleshop
-    resaleshop = ResaleShop(inventory = [], itemID = 0)
+    resaleshop = ResaleShop(itemID = 0)
     
     # Print a little banner
     print("-" * 21)
