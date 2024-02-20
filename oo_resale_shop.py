@@ -5,10 +5,12 @@ from computer import Computer # From computer import the Computer class
 class ResaleShop:
 
     # The inventory within the resaleshop
-    inventory: list = [] # computer objects would go in here
+    inventory: list # computer objects would go in here
+    # inventory: list = []
 
     # The itemID of the computers
-    itemID: int = 0
+    itemID: int
+    # itemID: int = 0
     
     # Set up the constructer
     def __init__(self, itemID):
